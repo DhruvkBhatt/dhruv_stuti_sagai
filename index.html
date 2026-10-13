@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Dhruv & Stuti · Ring Ceremony · 18 October 2026</title>
+<meta name="description" content="Dhruv & Stuti — Sagai & Ring Ceremony. 18 October 2026, 11:00 PM IST.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#fffdf9">
+<meta property="og:title" content="Dhruv & Stuti · Ring Ceremony">
+<meta property="og:description" content="18 October 2026 · 11:00 PM IST · Two hearts, one ring.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='24' cy='36' r='14' fill='none' stroke='%23c9a45c' stroke-width='5'/%3E%3Ccircle cx='40' cy='36' r='14' fill='none' stroke='%23e8a0b4' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ==========================================================================
+     Dhruv & Stuti — Sagai / Ring Ceremony
+     White, ivory and champagne gold, with a little blush. One file, no build.
+     ========================================================================== */
+  :root{
+    --bg:#fffdf9;
+    --white:#ffffff;
+    --ivory:#fbf6ee;
+    --blush:#fdf0f3;
+    --blush-2:#f6d6df;
+    --pink:#e8a0b4;
+    --gold:#c9a45c;
+    --gold-2:#b08a3e;
+    --gold-soft:#efe2c6;
+    --text:#3b3236;
+    --muted:#85787d;
+    --line:#efe6da;
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --script:'Great Vibes',cursive;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    --shadow:0 18px 50px -20px rgba(176,138,62,.28);
+    --ease:cubic-bezier(.22,1,.36,1);
+    --r:22px;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font-family:var(--sans);font-weight:400;font-size:1rem;line-height:1.7;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;margin:0}
+  p{margin:0}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+
+  /* ---------- ambient: soft glow + falling petals ---------- */
+  .glow{position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(60vw 60vw at 12% -10%,rgba(246,214,223,.55),transparent 60%),
+      radial-gradient(55vw 55vw at 100% 20%,rgba(239,226,198,.55),transparent 60%),
+      radial-gradient(50vw 50vw at 40% 110%,rgba(253,240,243,.8),transparent 60%);
+  }
+  #petals{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+  .petal{position:absolute;top:-40px;width:14px;height:12px;border-radius:14px 0 14px 0;
+    background:linear-gradient(135deg,#fbe3ea,#f2bccb);opacity:.75;
+    animation:fall linear forwards}
+  .petal.gold{background:linear-gradient(135deg,#f6ebd2,#dcc28a)}
+  @keyframes fall{
+    to{transform:translate3d(var(--dx),110vh,0) rotate(var(--rot));opacity:0}
+  }
+  #confetti{position:fixed;inset:0;z-index:50;pointer-events:none}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+  .reveal.visible{opacity:1;transform:none}
+
+  /* ---------- shared bits ---------- */
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:600;
+    letter-spacing:.28em;text-transform:uppercase;color:var(--gold-2)}
+  .eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:var(--gold)}
+  section{padding:110px 0;position:relative}
+  .head{text-align:center;max-width:620px;margin:0 auto 56px}
+  .head h2{font-size:clamp(2.2rem,5.5vw,3.4rem);margin-top:14px}
+  .head p{color:var(--muted);margin-top:14px}
+  .ornament{display:flex;justify-content:center;margin:0 auto;color:var(--gold)}
+  .card{background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:var(--r);
+    box-shadow:var(--shadow);backdrop-filter:blur(6px)}
+  .btn{display:inline-flex;align-items:center;gap:10px;font:500 .9rem/1 var(--sans);letter-spacing:.04em;
+    padding:15px 26px;border-radius:999px;border:1px solid var(--gold);cursor:pointer;text-decoration:none;
+    background:linear-gradient(135deg,#d8b874,#b8913f);color:#fff;
+    box-shadow:0 12px 26px -12px rgba(176,138,62,.7);transition:transform .3s var(--ease),box-shadow .3s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(176,138,62,.8)}
+  .btn.ghost{background:#fff;color:var(--gold-2)}
+  .btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+
+  /* ---------- hero ---------- */
+  .hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px 0 70px}
+  .rings{width:132px;height:auto;margin:0 auto 22px;display:block;overflow:visible}
+  .rings .r1,.rings .r2{fill:none;stroke-width:5;stroke-linecap:round;stroke-dasharray:260;stroke-dashoffset:260;animation:draw 2.2s var(--ease) forwards}
+  .rings .r1{stroke:url(#gGold)}
+  .rings .r2{stroke:url(#gRose);animation-delay:.5s}
+  .rings .gem{transform-origin:50% 50%;transform-box:fill-box;animation:sparkle 2.6s ease-in-out 2s infinite}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes sparkle{0%,100%{opacity:.9;transform:scale(1)}50%{opacity:1;transform:scale(1.25)}}
+  .names{font-family:var(--script);font-weight:400;font-size:clamp(4rem,15vw,8.8rem);line-height:1;
+    color:var(--text);margin:18px 0 6px;letter-spacing:.01em}
+  .names .amp{color:var(--gold);font-size:.7em;padding:0 .12em}
+  .sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,3.4vw,1.7rem);color:var(--muted)}
+  .date-line{display:flex;align-items:center;justify-content:center;gap:18px;margin:30px auto 0;
+    font-family:var(--serif);font-size:clamp(1.05rem,2.6vw,1.3rem);letter-spacing:.18em;text-transform:uppercase;color:var(--text)}
+  .date-line span{display:block}
+  .date-line .big{font-size:2.6em;letter-spacing:0;color:var(--gold-2);line-height:1;padding:0 18px;border-left:1px solid var(--gold-soft);border-right:1px solid var(--gold-soft)}
+
+  .cd-label{margin-top:40px;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+  .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:560px;margin:14px auto 0}
+  .unit{padding:20px 6px 16px;text-align:center}
+  .unit b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,8vw,3.4rem);line-height:1;color:var(--text);font-variant-numeric:tabular-nums}
+  .unit small{display:block;margin-top:10px;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-2)}
+  .unit.tick b{animation:tick .5s var(--ease)}
+  @keyframes tick{from{transform:translateY(-6px);opacity:.4}to{transform:none;opacity:1}}
+  .status{margin-top:22px;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--muted);min-height:1.7em}
+  .status strong{color:var(--gold-2);font-weight:600}
+  .hero-cta{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .scroll-hint{margin-top:44px;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+  .scroll-hint i{display:block;width:1px;height:38px;margin:12px auto 0;background:linear-gradient(var(--gold),transparent);animation:hint 2s ease-in-out infinite}
+  @keyframes hint{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  .celebrate .names{animation:glowText 2.4s ease-in-out infinite}
+  @keyframes glowText{50%{text-shadow:0 0 28px rgba(232,160,180,.6)}}
+
+  /* ---------- quote band ---------- */
+  .quote{padding:70px 0;text-align:center}
+  .quote blockquote{margin:0 auto;max-width:720px;font-family:var(--serif);font-style:italic;
+    font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.4;color:var(--text)}
+  .quote cite{display:block;margin-top:18px;font-style:normal;font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-2)}
+
+  /* ---------- story timeline ---------- */
+  .timeline{position:relative;max-width:820px;margin:0 auto}
+  .timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;
+    background:linear-gradient(transparent,var(--gold-soft) 8%,var(--gold-soft) 92%,transparent)}
+  .moment{position:relative;width:50%;padding:0 44px 54px}
+  .moment:nth-child(odd){margin-left:0;text-align:right}
+  .moment:nth-child(even){margin-left:50%}
+  .moment .dot{position:absolute;top:22px;width:44px;height:44px;border-radius:50%;
+    display:grid;place-items:center;font-size:1.15rem;background:#fff;border:1px solid var(--gold-soft);box-shadow:var(--shadow)}
+  .moment:nth-child(odd) .dot{right:-22px}
+  .moment:nth-child(even) .dot{left:-22px}
+  .moment .card{padding:24px 26px}
+  .moment time{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+  .moment h3{font-size:1.65rem;margin:6px 0 8px}
+  .moment p{color:var(--muted);font-size:.95rem}
+  .moment.final .card{background:linear-gradient(135deg,#fff,var(--blush));border-color:var(--blush-2)}
+  .moment.final h3{color:var(--gold-2)}
+
+  /* ---------- details ---------- */
+  .details{background:linear-gradient(var(--bg),var(--ivory) 30%,var(--ivory) 70%,var(--bg))}
+  .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .detail{padding:34px 26px;text-align:center}
+  .detail .ic{width:54px;height:54px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;
+    background:var(--blush);color:var(--gold-2)}
+  .detail small{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+  .detail h3{font-size:1.7rem;margin:8px 0 6px}
+  .detail p{color:var(--muted);font-size:.93rem}
+  .detail-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .note{text-align:center;margin-top:22px;color:var(--muted);font-size:.85rem}
+
+  /* ---------- rituals ---------- */
+  .rituals{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+  .ritual{padding:28px 24px;position:relative;overflow:hidden}
+  .ritual .num{font-family:var(--serif);font-size:3rem;line-height:1;color:var(--gold-soft);position:absolute;right:18px;top:12px}
+  .ritual .em{font-size:1.6rem}
+  .ritual h3{font-size:1.45rem;margin:12px 0 6px}
+  .ritual p{color:var(--muted);font-size:.9rem}
+
+  /* ---------- little things ---------- */
+  .things{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:760px;margin:0 auto}
+  .thing{padding:14px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);
+    font-family:var(--serif);font-size:1.2rem;box-shadow:0 8px 20px -14px rgba(176,138,62,.4);
+    transition:transform .35s var(--ease)}
+  .thing:hover{transform:translateY(-3px) rotate(-1deg)}
+  .thing span{margin-right:8px}
+  .things-line{text-align:center;margin-top:30px;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--muted)}
+
+  /* ---------- letter ---------- */
+  .letter{max-width:680px;margin:0 auto;padding:54px 46px;text-align:left;position:relative}
+  .letter::before{content:"";position:absolute;inset:10px;border:1px solid var(--gold-soft);border-radius:16px;pointer-events:none}
+  .letter .to{font-family:var(--script);font-size:2.6rem;color:var(--gold-2);line-height:1}
+  .letter p{font-family:var(--serif);font-size:1.25rem;line-height:1.7;margin-top:16px;color:var(--text)}
+  .letter .sign{font-family:var(--script);font-size:2.2rem;text-align:right;margin-top:22px;color:var(--text)}
+
+  /* ---------- blessings ---------- */
+  .wish-form{max-width:620px;margin:0 auto;padding:28px;display:grid;gap:12px}
+  .wish-form input,.wish-form textarea{width:100%;font:400 1rem var(--sans);color:var(--text);
+    padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:#fff;resize:vertical}
+  .wish-form textarea{min-height:96px}
+  .wish-form .btn{justify-self:center}
+  .wishes{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:34px}
+  .wish{padding:20px 22px;animation:pop .6s var(--ease)}
+  .wish p{font-family:var(--serif);font-size:1.15rem;line-height:1.5}
+  .wish small{display:block;margin-top:10px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2)}
+  @keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+
+  /* ---------- recruitment file ---------- */
+  .hr{background:linear-gradient(var(--bg),var(--blush) 40%,var(--bg))}
+  .jd{max-width:760px;margin:0 auto 54px;padding:30px 32px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+  .jd small{display:block;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+  .jd b{display:block;font-family:var(--serif);font-weight:500;font-size:1.2rem;margin-top:4px;line-height:1.3}
+  .pipeline{max-width:820px;margin:0 auto;display:grid;gap:14px}
+  .memo{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:22px 26px;align-items:start}
+  .memo .when{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2);font-weight:600;line-height:1.6;padding-top:4px}
+  .memo .when span{display:block;color:var(--muted);font-weight:400;letter-spacing:.12em}
+  .memo>div{min-width:0}
+  .memo p{overflow-wrap:anywhere}
+  .memo h3{font-size:1.45rem}
+  .memo p{color:var(--muted);font-size:.93rem;margin-top:4px}
+  .memo q{display:block;margin-top:8px;font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--text);quotes:"“" "”"}
+  .chip{display:inline-block;margin-top:12px;padding:5px 12px;border-radius:999px;font-size:.68rem;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;background:var(--gold-soft);color:var(--gold-2)}
+  .chip.pink{background:var(--blush-2);color:#a25570}
+  .chip.wait{background:#fff;border:1px dashed var(--gold);color:var(--gold-2)}
+  .memo.now{border-color:var(--blush-2);background:linear-gradient(135deg,#fff,var(--blush))}
+  .titles{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;max-width:860px;margin:60px auto 0}
+  .titles span{padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-family:var(--serif);font-size:1.15rem}
+  .titles i{color:var(--gold);font-style:normal}
+  .titles span:last-child{border-color:var(--gold);background:linear-gradient(135deg,#fff,var(--ivory));color:var(--gold-2);font-weight:600}
+  .titles-note{text-align:center;margin-top:14px;color:var(--muted);font-size:.85rem}
+  .sub-head{text-align:center;font-size:clamp(1.7rem,4vw,2.3rem);margin:90px 0 30px}
+  .checklist{max-width:680px;margin:0 auto;display:grid;gap:12px}
+  .step{display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:center;padding:18px 22px}
+  .step .box{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:1.1rem;background:var(--ivory);border:1px solid var(--gold-soft)}
+  .step.done .box{background:linear-gradient(135deg,#d8b874,#b8913f);color:#fff;border-color:transparent}
+  .step h3{font-size:1.3rem}
+  .step p{color:var(--muted);font-size:.88rem}
+  .step .chip{margin:0}
+  .clauses{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;max-width:900px;margin:0 auto}
+  .clause{padding:24px}
+  .clause h3{font-size:1.3rem;margin:8px 0 4px}
+  .clause p{color:var(--muted);font-size:.9rem}
+  .clause small{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+  .pill{display:inline-flex;gap:8px;align-items:center;margin-top:16px;padding:7px 16px;border-radius:999px;background:#fff;
+    border:1px solid var(--gold-soft);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+  .pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,160,180,.7)}70%{box-shadow:0 0 0 9px rgba(232,160,180,0)}100%{box-shadow:0 0 0 0 rgba(232,160,180,0)}}
+
+  /* ---------- footer ---------- */
+  footer{padding:80px 0 60px;text-align:center}
+  footer .names{font-size:clamp(3rem,10vw,5rem)}
+  footer p{color:var(--muted);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase}
+  footer .tag{margin-top:16px;font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:1.15rem}
+
+  /* ---------- music toggle ---------- */
+  .fab{position:fixed;right:18px;bottom:18px;z-index:40;width:48px;height:48px;border-radius:50%;
+    border:1px solid var(--gold-soft);background:#fff;color:var(--gold-2);box-shadow:var(--shadow);cursor:pointer;
+    display:grid;place-items:center;font-size:1.1rem}
+  .fab.on{animation:spin 6s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:760px){
+    .jd{grid-template-columns:1fr 1fr;padding:24px}
+    .memo{grid-template-columns:1fr;gap:6px;padding:20px}
+    .step{grid-template-columns:40px 1fr;padding:16px}
+    .step .chip{grid-column:2;justify-self:start}
+    section{padding:80px 0}
+    .detail-grid{grid-template-columns:1fr}
+    .timeline::before{left:22px}
+    .moment,.moment:nth-child(even){width:100%;margin-left:0;text-align:left;padding:0 0 36px 64px}
+    .moment:nth-child(odd){text-align:left}
+    .moment .dot,.moment:nth-child(odd) .dot,.moment:nth-child(even) .dot{left:0;right:auto}
+    .countdown{gap:8px}
+    .unit{padding:16px 2px 12px}
+    .letter{padding:40px 26px}
+    .date-line{gap:10px;letter-spacing:.12em}
+    .date-line .big{padding:0 12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    .rings .r1,.rings .r2{stroke-dashoffset:0}
+  }
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+<div id="petals" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<!-- ============================== HERO ============================== -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <svg class="rings" viewBox="0 0 140 96" aria-hidden="true">
+      <defs>
+        <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#e9d39c"/><stop offset=".5" stop-color="#c9a45c"/><stop offset="1" stop-color="#9c7731"/>
+        </linearGradient>
+        <linearGradient id="gRose" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f6cfd9"/><stop offset=".5" stop-color="#e8a0b4"/><stop offset="1" stop-color="#c97a90"/>
+        </linearGradient>
+      </defs>
+      <circle class="r1" cx="52" cy="56" r="34"/>
+      <circle class="r2" cx="88" cy="56" r="34"/>
+      <g class="gem">
+        <path d="M44 14 L52 6 L60 14 L52 24 Z" fill="#fff" stroke="#c9a45c" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M44 14 H60 M52 6 V24" stroke="#e9d39c" stroke-width="1"/>
+      </g>
+    </svg>
+
+    <p class="eyebrow reveal">Sagai &middot; Ring Ceremony</p>
+    <h1 class="names reveal" style="--d:.15s">Dhruv <span class="amp">&amp;</span> Stuti</h1>
+    <p class="sub reveal" style="--d:.3s" id="heroSub">Two hearts, one promise &mdash; and a ring to seal it.</p>
+
+    <div class="date-line reveal" style="--d:.45s" aria-label="Sunday, 18 October 2026, 11:00 PM IST">
+      <span>Sunday</span>
+      <span class="big">18</span>
+      <span>Oct 2026</span>
+    </div>
+
+    <p class="cd-label reveal" style="--d:.55s" id="cdLabel">Counting down to forever</p>
+    <div class="countdown reveal" style="--d:.6s" id="countdown" role="timer" aria-live="off">
+      <div class="unit card"><b id="cd-d">00</b><small>Days</small></div>
+      <div class="unit card"><b id="cd-h">00</b><small>Hours</small></div>
+      <div class="unit card"><b id="cd-m">00</b><small>Minutes</small></div>
+      <div class="unit card"><b id="cd-s">00</b><small>Seconds</small></div>
+    </div>
+    <p class="status reveal" style="--d:.7s" id="status">until <strong>11:00 PM IST</strong>, when forever begins.</p>
+    <p class="reveal" style="--d:.75s"><span class="pill" id="phasePill">Phase 2 · Ring Deliverable · Scheduled</span></p>
+
+    <div class="hero-cta reveal" style="--d:.8s">
+      <a class="btn" href="#details">The Ceremony 💍</a>
+      <a class="btn ghost" href="#story">Our Story</a>
+      <a class="btn ghost" href="#recruitment">The Recruitment 💼</a>
+    </div>
+    <p class="scroll-hint reveal" style="--d:1s">Scroll<i></i></p>
+  </div>
+</header>
+
+<!-- ============================== QUOTE ============================== -->
+<div class="quote">
+  <div class="wrap">
+    <blockquote class="reveal">&ldquo;It started with two words &mdash; <em>Hello Stuti</em> &mdash; and somehow, it&rsquo;s ending with a ring.&rdquo;
+      <cite>Actually, it&rsquo;s only beginning</cite>
+    </blockquote>
+  </div>
+</div>
+
+<!-- ============================== STORY ============================== -->
+<section id="story">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">Our Little Story</span>
+      <h2 class="reveal">From a hello to a forever</h2>
+      <p class="reveal">One hundred-and-one days, a thousand messages, too many coffees.</p>
+    </div>
+
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ============================== RECRUITMENT ============================== -->
+<section class="hr" id="recruitment">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">D. B. &amp; Co. &middot; HR File</span>
+      <h2 class="reveal">The recruitment process</h2>
+      <p class="reveal">It began with a job posting. &ldquo;The role will most likely be demanding, but the remuneration is better than industry standards.&rdquo;</p>
+    </div>
+
+    <div class="jd card reveal">
+      <div><small>Position</small><b>Chief Romantic Officer &amp; Senior Life Partner</b></div>
+      <div><small>Type</small><b>Full-time &middot; Permanent</b></div>
+      <div><small>Probation</small><b>Zero</b></div>
+      <div><small>Reporting to</small><b>The Management 👑</b></div>
+    </div>
+
+    <div class="pipeline" id="pipeline"></div>
+
+    <div class="titles reveal" id="titles"></div>
+    <p class="titles-note reveal">Management&rsquo;s title, as observed by the candidate. Question mark since removed. 😌</p>
+
+    <h3 class="sub-head reveal">The onboarding checklist</h3>
+    <div class="checklist" id="checklist"></div>
+
+    <h3 class="sub-head reveal">Clauses in our offer to forever</h3>
+    <div class="clauses" id="clauses"></div>
+
+    <div class="quote" style="padding-bottom:0">
+      <blockquote class="reveal">&ldquo;Choosing you was easy, not saying it too early was always the challenge.&rdquo;
+        <cite>Mrs. D. B. &middot; 21 August 2026</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== DETAILS ============================== -->
+<section class="details" id="details">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">The Ceremony</span>
+      <h2 class="reveal">Join us as we exchange rings</h2>
+      <p class="reveal">With the blessings of our families, we&rsquo;d love for you to be part of this moment.</p>
+      <p class="reveal" style="font-size:.85rem"><em>Session title:</em> Executive Phase 2 Ring Deliverable &middot; <em>Head of Final Ring Approval:</em> Mrs. D. B.</p>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail card reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+        <small>When</small>
+        <h3>Sunday, 18 Oct</h3>
+        <p>2026</p>
+      </div>
+      <div class="detail card reveal" style="--d:.12s">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <small>Muhurat</small>
+        <h3 id="d-time">11:00 PM</h3>
+        <p>Indian Standard Time</p>
+      </div>
+      <div class="detail card reveal" style="--d:.24s">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+        <small>Where</small>
+        <h3 id="d-venue">Venue</h3>
+        <p id="d-city">Details shared soon</p>
+      </div>
+    </div>
+
+    <div class="detail-actions reveal">
+      <button class="btn" type="button" id="icsBtn">Add to Calendar 📅</button>
+      <a class="btn ghost" id="gcalBtn" target="_blank" rel="noopener">Google Calendar</a>
+      <a class="btn ghost" id="mapBtn" target="_blank" rel="noopener" hidden>Directions 📍</a>
+    </div>
+    <p class="note reveal" id="dressNote">Dress code: traditional &middot; whites, ivories &amp; soft pastels welcome 🤍</p>
+  </div>
+</section>
+
+<!-- ============================== RITUALS ============================== -->
+<section id="rituals">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">The Evening</span>
+      <h2 class="reveal">Little rituals, big blessings</h2>
+      <p class="reveal">A few of the traditions that will make this night ours.</p>
+    </div>
+    <div class="rituals" id="ritualList"></div>
+  </div>
+</section>
+
+<!-- ============================== LITTLE THINGS ============================== -->
+<section id="things" style="padding-top:40px">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">Us, in small things</span>
+      <h2 class="reveal">The things that are now ours</h2>
+    </div>
+    <div class="things" id="thingList"></div>
+    <p class="things-line reveal">And somehow, every one of them reminds me of you.</p>
+  </div>
+</section>
+
+<!-- ============================== LETTER ============================== -->
+<section id="letter" style="padding-top:40px">
+  <div class="wrap">
+    <div class="letter card reveal">
+      <div class="to">My Stuti,</div>
+      <p>I didn&rsquo;t know a &ldquo;hello&rdquo; could turn into this. Somewhere between your coffee and my terrible sleep schedule, between the teasing and the late-night talks, you became my favourite part of every day.</p>
+      <p>On the 18th, I&rsquo;ll put a ring on your finger. But honestly, you put one around my heart a long time ago.</p>
+      <p>Here&rsquo;s to every good morning, every late good night, and every &ldquo;one more thing&rdquo; still left to say &mdash; for the rest of our lives.</p>
+      <p>You once asked me to come with a smile and bring my whole heart. I&rsquo;m bringing both &mdash; and a ring.</p>
+      <div class="sign">&mdash; Yours, Dhruv</div>
+      <p style="text-align:right;font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);margin-top:4px">Mr. D. B. &middot; CRO &amp; Senior Life Partner</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== BLESSINGS ============================== -->
+<section id="blessings" style="padding-top:40px">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">Blessings</span>
+      <h2 class="reveal">Leave a little wish</h2>
+      <p class="reveal">A line of love for the two of us &mdash; we&rsquo;ll read every one.</p>
+    </div>
+    <form class="wish-form card reveal" id="wishForm" autocomplete="off">
+      <input id="wishName" maxlength="40" placeholder="Your name" required aria-label="Your name">
+      <textarea id="wishText" maxlength="240" placeholder="Your blessing for Dhruv & Stuti…" required aria-label="Your blessing"></textarea>
+      <button class="btn" type="submit">Send Blessing 🤍</button>
+    </form>
+    <div class="wishes" id="wishes"></div>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer>
+  <div class="wrap">
+    <div class="names reveal">D <span class="amp">&amp;</span> S</div>
+    <p class="reveal">18 &middot; 10 &middot; 2026</p>
+    <p class="tag reveal">Coffee. Lilies. Tiramisu. White. Pink. And now &mdash; a ring. 💍</p>
+  </div>
+</footer>
+
+<button class="fab" id="musicBtn" type="button" aria-label="Play soft music" title="Play soft music" hidden>♪</button>
+
+<script>
+/* ==========================================================================
+   CONFIG — edit everything here, nothing else needs to change.
+   ========================================================================== */
+const CONFIG = {
+  // 18 October 2026, 11:00 PM India Standard Time (UTC+05:30)
+  start: '2026-10-18T23:00:00+05:30',
+  durationHours: 2,
+  venue: 'Ahmedabad',  // add the hall / venue name here when finalised
+  city: 'Gujarat, India',
+  mapUrl: 'https://maps.google.com/?q=Ahmedabad,+Gujarat', // replace with the exact venue pin; empty hides the button
+  music: '',            // optional mp3 URL for the soft music button
+  // Optional Google Apps Script endpoint to collect blessings (same idea as the Sunday site).
+  // Leave empty and blessings stay in this browser only.
+  wishEndpoint: ''
+};
+
+const STORY = [
+  { date:'9 July 2026',   em:'🌱', title:'The First Hello',        text:'“Hello Stuti…” — two simple words that turned into thousands of texts, endless teasing and late-night conversations.' },
+  { date:'Mid July 2026', em:'☕', title:'Coffee & “Unknown With S”', text:'Somewhere between your coffee and my terrible sleep schedule, talking to you became my favourite part of the day.' },
+  { date:'22 July 2026',  em:'💌', title:'The First Little Website', text:'3:38 AM, a tiny surprise while you slept. You opened it, you blushed — and you clicked YES.' },
+  { date:'9 August 2026', em:'🚆', title:'Finally, You',            text:'One train to Surat. No screens between us. Just you and me — and all those messages became real.' },
+  { date:'August 2026',   em:'🥹', title:'The Words We Almost Said', text:'“ILU???” — and a long, very serious debate about what those three letters stand for.' },
+  { date:'18 October 2026', em:'💍', title:'The Ring', text:'Our families, our blessings, one ring — and the beginning of forever.', final:true }
+];
+
+const RITUALS = [
+  { em:'🪔', title:'Ganesh Sthapana', text:'We begin by seeking Lord Ganesha’s blessings for a smooth, joyful new beginning.' },
+  { em:'🌼', title:'Gol Dhana',       text:'Coriander seeds and jaggery shared between families — a sweet Gujarati promise.' },
+  { em:'🎁', title:'Chundadi & Shagun', text:'Blessings, gifts and the red chundadi — welcoming each other into the family.' },
+  { em:'💍', title:'Ring Exchange',   text:'At 11:00 PM, Phase 2 delivered. Two rings, two hands, one promise.' },
+  { em:'🙏', title:'Ashirwad',        text:'Touching the feet of our elders and carrying their blessings into our forever.' },
+  { em:'🍰', title:'Sweet Ending',    text:'Mithai, music, photographs — and maybe a little tiramisu, for her.' }
+];
+
+const DONE = () => Date.now() >= START.getTime();
+
+const RECRUITMENT = [
+  { when:'12 Aug', time:'11:14 PM', title:'First Contact', q:'Hi 😛 — Ben kon cho tame?', chip:'Connected' },
+  { when:'13–14 Aug', title:'Position Opened', text:'A full job description: Chief Romantic Officer & Senior Life Partner. Duties include cute websites, crisis management, high shelves and answering “What do you want to eat?”', chip:'Hiring' },
+  { when:'14 Aug', time:'6:16 PM', title:'Resume Submitted', text:'Dhruv_K_Bhatt_Chief_Romantic_Officer_Application.pdf — with “some questions”.', chip:'Applied' },
+  { when:'17–18 Aug', title:'The Clarification Call', text:'Two reschedules, one “Officially Displeased”, and finally — a call worth waiting for.', chip:'Scheduling: under review 😅', pink:true },
+  { when:'18 Aug', time:'11:07 PM', title:'Apply Now', q:'After due diligence and an extremely serious internal board meeting… the candidate would like to proceed.', chip:'Under final consideration' },
+  { when:'20 Aug', time:'3:30 AM', title:'Application Portal Deployed', text:'Management woke up, blushed, smiled broader than ever — and almost cried happy tears. 🥹', chip:'Accepted ✅' },
+  { when:'21 Aug', title:'Welcome to Forever', text:'Joining date chosen: 20 August 2026 — the day we both said “Yes. We are choosing this.”', chip:'Joined ❤️' },
+  { when:'22 Aug', title:'Offer Letter Signed', text:'Six pages. D. B. & Co. Full-time · Permanent · Lifetime. Negotiations: none required.', chip:'Signed ✍️' },
+  { when:'28–29 Aug', title:'Two-Day Induction', text:'Dessert & Drive, then Brunch. The candidate requested “Select All”. Approved.', chip:'Induction complete' },
+  { when:'3–7 Sep', title:'CEO Induction at SLP HQ', text:'Home, family, stakeholders — and one P0 joint career decision.', chip:'Rated 10 / 10' },
+  { when:'12–16 Sep', title:'Phase 2: Ring Procurement', text:'Field inspections of cuts, metals and settings. Coffee before, dessert after.', chip:'Procured 💍' },
+  { when:'18 Oct', time:'11:00 PM', title:'Ring Deliverable', text:'One (1) properly sized engagement ring, to secure exclusivity.', ring:true }
+];
+
+const TITLES = ['Queen B', 'Mrs. Queen B', 'Mrs. D. B.', '(Mrs?) D. B.', 'Mrs. D. B. — CEO, Managing Partner & Head of Final Ring Approval'];
+
+const CHECKLIST = [
+  { title:'Digital Intent', text:'A dedicated, bespoke website outlining the application.', done:() => true },
+  { title:'Phase 1 Deliverables', text:'Date nights, spontaneous adventures, coffee runs.', done:() => true, chip:'Ongoing forever' },
+  { title:'Phase 2 Capital Investment', text:'One (1) properly sized engagement ring.', done:DONE, chip:'18 Oct · 11 PM' },
+  { title:'Final Acquisition & Signing', text:'Traditional handover of one (1) Mangalsutra.', done:() => false, chip:'Coming soon 😌' }
+];
+
+const CLAUSES = [
+  ['❤️','Mutual Choice','Keep choosing each other through the exciting, ordinary and difficult days.'],
+  ['🤝','Communication','No ego above the relationship; difficult conversations deserve patience and honesty.'],
+  ['🚀','Growth & Career','Always support each other’s ambitions and individuality.'],
+  ['🏡','Family & Future','Respect both families while building traditions and a home of our own.'],
+  ['🌼','Romance Maintenance','Dates, coffee, mogra, travel, surprises and unnecessary romantic websites must continue.'],
+  ['♾️','Lifetime Friendship','Above every title, remain each other’s closest friend and safest teammate.']
+];
+
+const THINGS = [
+  ['☕','Coffee'],['🌸','Lilies'],['🍰','Tiramisu'],['🤍','White'],['🩷','Pink'],
+  ['🌙','3 AM talks'],['🚆','Surat trains'],['😤','“Aama!”'],['💌','Tiny websites'],['🌼','Mogra'],['👕','Stolen T-shirts'],['🛏️','50% of the blanket'],['🍽️','“What do you want to eat?”'],['💼','D. B. & Co.'],['💍','One ring']
+];
+
+/* ==========================================================================
+   Helpers
+   ========================================================================== */
+const $ = (s) => document.querySelector(s);
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad = (n) => String(n).padStart(2, '0');
+
+const START = new Date(CONFIG.start);
+const END = new Date(START.getTime() + CONFIG.durationHours * 3600e3);
+
+/* ---------- preview helper: ?preview=live | after | hour ---------- */
+// Lets you check the celebration states before the day, e.g. index.html?preview=live
+(function () {
+  const p = new URLSearchParams(location.search).get('preview');
+  if (!p) return;
+  const offset = { hour: -30 * 60e3, day: -5 * 3600e3, live: 60e3, midnight: 3600e3, after: 3 * 86400e3 }[p];
+  if (offset === undefined) return;
+  const real = Date.now, shift = START.getTime() + offset - real();
+  Date.now = () => real() + shift;
+})();
+
+/* ---------- render content ---------- */
+$('#pipeline').innerHTML = RECRUITMENT.map((m, i) => {
+  const chip = m.ring ? (DONE() ? '<span class="chip">Delivered 💍</span>' : '<span class="chip wait">Scheduled</span>')
+    : `<span class="chip${m.pink ? ' pink' : ''}">${esc(m.chip)}</span>`;
+  return `<div class="memo card reveal${m.ring ? ' now' : ''}" style="--d:${(i % 2) * .08}s">
+    <div class="when">${esc(m.when)} 2026${m.time ? `<span>${esc(m.time)}</span>` : ''}</div>
+    <div><h3>${esc(m.title)}</h3>${m.text ? `<p>${esc(m.text)}</p>` : ''}${m.q ? `<q>${esc(m.q)}</q>` : ''}${chip}</div>
+  </div>`;
+}).join('');
+
+$('#titles').innerHTML = TITLES.map((t) => `<span>${esc(t)}</span>`).join('<i>→</i>');
+
+$('#checklist').innerHTML = CHECKLIST.map((c, i) => {
+  const done = c.done();
+  return `<div class="step card reveal${done ? ' done' : ''}" style="--d:${i * .08}s">
+    <span class="box">${done ? '✓' : i + 1}</span>
+    <div><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></div>
+    <span class="chip${done ? '' : ' wait'}">${done ? (c.chip && i === 1 ? esc(c.chip) : 'Complete') : esc(c.chip)}</span>
+  </div>`;
+}).join('');
+
+$('#clauses').innerHTML = CLAUSES.map(([e, t, d], i) => `
+  <div class="clause card reveal" style="--d:${(i % 3) * .08}s"><small>Clause ${pad(i + 1)}</small>
+    <h3>${e} ${esc(t)}</h3><p>${esc(d)}</p></div>`).join('');
+
+if (DONE()) $('#phasePill').textContent = 'Phase 2 · Ring Deliverable · Delivered ✓';
+
+$('#timeline').innerHTML = STORY.map((m) => `
+  <div class="moment reveal${m.final ? ' final' : ''}">
+    <span class="dot">${m.em}</span>
+    <div class="card"><time>${esc(m.date)}</time><h3>${esc(m.title)}</h3><p>${esc(m.text)}</p></div>
+  </div>`).join('');
+
+$('#ritualList').innerHTML = RITUALS.map((r, i) => `
+  <div class="ritual card reveal" style="--d:${(i % 3) * .1}s">
+    <span class="num">${pad(i + 1)}</span><span class="em">${r.em}</span>
+    <h3>${esc(r.title)}</h3><p>${esc(r.text)}</p>
+  </div>`).join('');
+
+$('#thingList').innerHTML = THINGS.map(([e, t], i) =>
+  `<span class="thing reveal" style="--d:${i * .05}s"><span>${e}</span>${esc(t)}</span>`).join('');
+
+if (CONFIG.venue) $('#d-venue').textContent = CONFIG.venue;
+if (CONFIG.city) $('#d-city').textContent = CONFIG.city;
+if (CONFIG.mapUrl) { $('#mapBtn').href = CONFIG.mapUrl; $('#mapBtn').hidden = false; }
+
+/* ---------- reveal on scroll ---------- */
+(function () {
+  const els = document.querySelectorAll('.reveal');
+  if (reduced || !('IntersectionObserver' in window)) { els.forEach((e) => e.classList.add('visible')); return; }
+  const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+    if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+  }), { rootMargin: '0px 0px -60px 0px' });
+  els.forEach((e) => io.observe(e));
+})();
+
+/* ---------- countdown ---------- */
+(function () {
+  const el = { d: $('#cd-d'), h: $('#cd-h'), m: $('#cd-m'), s: $('#cd-s') };
+  const status = $('#status');
+  let last = {}, phase = '';
+
+  function set(key, val) {
+    if (last[key] === val) return;
+    last[key] = val;
+    el[key].textContent = val;
+    const unit = el[key].parentElement;
+    unit.classList.remove('tick'); void unit.offsetWidth; unit.classList.add('tick');
+  }
+
+  function update() {
+    const now = Date.now();
+    const diff = START - now;
+
+    if (diff > 0) {
+      const s = Math.floor(diff / 1000);
+      set('d', pad(Math.floor(s / 86400)));
+      set('h', pad(Math.floor(s % 86400 / 3600)));
+      set('m', pad(Math.floor(s % 3600 / 60)));
+      set('s', pad(s % 60));
+      const p = diff < 3600e3 ? 'hour' : diff < 86400e3 ? 'day' : 'wait';
+      if (p !== phase) {
+        phase = p;
+        status.innerHTML = p === 'hour' ? 'Less than an hour. <strong>Hearts racing.</strong> 💓'
+          : p === 'day' ? '<strong>Tomorrow-ish!</strong> The ring is ready. 💍'
+          : 'until <strong>11:00 PM IST</strong>, when forever begins.';
+      }
+      return;
+    }
+
+    // After 11:00 PM the same clock counts up — "engaged for" (e.g. 12:00 AM → 00d 01h 00m).
+    const since = Math.floor((now - START) / 1000);
+    set('d', pad(Math.floor(since / 86400)));
+    set('h', pad(Math.floor(since % 86400 / 3600)));
+    set('m', pad(Math.floor(since % 3600 / 60)));
+    set('s', pad(since % 60));
+
+    const p = now < END ? 'live' : 'after';
+    if (p !== phase) {
+      const first = phase !== '';
+      phase = p;
+      document.body.classList.add('celebrate');
+      $('#cdLabel').textContent = 'Engaged for';
+      if (p === 'live') {
+        status.innerHTML = '<strong>It&rsquo;s happening</strong> — the rings have just been exchanged. 💍';
+        $('#heroSub').textContent = 'This is the moment. 🤍';
+      } else {
+        status.innerHTML = 'since <strong>18 October 2026, 11:00 PM</strong> — and counting, forever. 🤍';
+        $('#heroSub').textContent = 'She said yes. Now and always.';
+      }
+      if (first || p === 'live') confetti();
+    }
+  }
+  update();
+  setInterval(update, 1000);
+})();
+
+/* ---------- calendar ---------- */
+(function () {
+  const fmt = (d) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+  const title = 'Dhruv & Stuti — Sagai / Ring Ceremony 💍';
+  const where = [CONFIG.venue, CONFIG.city].filter(Boolean).join(', ');
+  const desc = 'Join us as Dhruv & Stuti exchange rings. ' + location.href.split('#')[0];
+
+  $('#gcalBtn').href = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+    + '&text=' + encodeURIComponent(title)
+    + '&dates=' + fmt(START) + '/' + fmt(END)
+    + '&details=' + encodeURIComponent(desc)
+    + '&location=' + encodeURIComponent(where);
+
+  $('#icsBtn').addEventListener('click', () => {
+    const ics = [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Dhruv & Stuti//Sagai//EN', 'BEGIN:VEVENT',
+      'UID:dhruv-stuti-sagai-20261018@ds', 'DTSTAMP:' + fmt(new Date()),
+      'DTSTART:' + fmt(START), 'DTEND:' + fmt(END),
+      'SUMMARY:' + title, 'DESCRIPTION:' + desc, 'LOCATION:' + where,
+      'BEGIN:VALARM', 'TRIGGER:-PT2H', 'ACTION:DISPLAY', 'DESCRIPTION:Ring ceremony in 2 hours 💍', 'END:VALARM',
+      'END:VEVENT', 'END:VCALENDAR'
+    ].join('\r\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+    a.download = 'Dhruv-Stuti-Sagai.ics';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  });
+})();
+
+/* ---------- blessings ---------- */
+(function () {
+  const KEY = 'ds-sagai-wishes';
+  const list = $('#wishes');
+  const seed = [{ n: 'Dhruv', t: 'To the girl who made me smile before coffee — here’s to forever. 🤍' }];
+  let wishes;
+  try { wishes = JSON.parse(localStorage.getItem(KEY)) || seed; } catch { wishes = seed; }
+
+  const render = () => {
+    list.innerHTML = wishes.slice().reverse().map((w) =>
+      `<div class="wish card"><p>“${esc(w.t)}”</p><small>— ${esc(w.n)}</small></div>`).join('');
+  };
+  render();
+
+  $('#wishForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const n = $('#wishName').value.trim(), t = $('#wishText').value.trim();
+    if (!n || !t) return;
+    wishes.push({ n, t, at: new Date().toISOString() });
+    try { localStorage.setItem(KEY, JSON.stringify(wishes)); } catch {}
+    if (CONFIG.wishEndpoint) {
+      fetch(CONFIG.wishEndpoint, { method: 'POST', mode: 'no-cors', body: JSON.stringify({ name: n, wish: t, at: new Date().toISOString() }) }).catch(() => {});
+    }
+    render();
+    e.target.reset();
+    confetti(60);
+  });
+})();
+
+/* ---------- petals ---------- */
+(function () {
+  if (reduced) return;
+  const box = $('#petals');
+  function petal() {
+    if (document.hidden) return;
+    const p = document.createElement('span');
+    const dur = 9 + Math.random() * 8;
+    p.className = 'petal' + (Math.random() < .35 ? ' gold' : '');
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.setProperty('--dx', (Math.random() * 30 - 15) + 'vw');
+    p.style.setProperty('--rot', (Math.random() * 720 - 360) + 'deg');
+    p.style.animationDuration = dur + 's';
+    p.style.transform = `scale(${.6 + Math.random() * .7})`;
+    box.appendChild(p);
+    setTimeout(() => p.remove(), dur * 1000);
+  }
+  setInterval(petal, 1100);
+})();
+
+/* ---------- confetti ---------- */
+function confetti(count = 180) {
+  if (reduced) return;
+  const c = $('#confetti'), ctx = c.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  c.width = innerWidth * dpr; c.height = innerHeight * dpr;
+  ctx.scale(dpr, dpr);
+  const colors = ['#c9a45c', '#e9d39c', '#e8a0b4', '#f6d6df', '#ffffff'];
+  const parts = Array.from({ length: count }, () => ({
+    x: innerWidth / 2 + (Math.random() - .5) * 200, y: innerHeight * .35,
+    vx: (Math.random() - .5) * 14, vy: Math.random() * -14 - 4,
+    w: 6 + Math.random() * 6, h: 4 + Math.random() * 6,
+    r: Math.random() * Math.PI, vr: (Math.random() - .5) * .3,
+    c: colors[Math.floor(Math.random() * colors.length)]
+  }));
+  let frame = 0;
+  (function tick() {
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    parts.forEach((p) => {
+      p.vy += .32; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.r += p.vr;
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.r);
+      ctx.fillStyle = p.c; ctx.globalAlpha = Math.max(0, 1 - frame / 220);
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore();
+    });
+    if (++frame < 220) requestAnimationFrame(tick);
+    else ctx.clearRect(0, 0, innerWidth, innerHeight);
+  })();
+}
+
+/* ---------- optional music ---------- */
+(function () {
+  if (!CONFIG.music) return;
+  const btn = $('#musicBtn'), audio = new Audio(CONFIG.music);
+  audio.loop = true; audio.volume = .5;
+  btn.hidden = false;
+  btn.addEventListener('click', () => {
+    if (audio.paused) { audio.play(); btn.classList.add('on'); }
+    else { audio.pause(); btn.classList.remove('on'); }
+  });
+})();
+
+</script>
+</body>
+</html>
